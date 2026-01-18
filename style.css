@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url("https://asset.tabloidbintang.com/img/1680590801_b514aee16a6a3409732e.jpeg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 80px 40px;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #000, transparent);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background: #333;
+    border: none;
+    padding: 12px 25px;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.badge {
+    border: 1px solid #fff;
+    padding: 6px 10px;
+    border-radius: 50%;
+}
+
+/* SECTION */
+.section {
+    padding: 40px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+}
+
+.slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.slider img {
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.slider img:hover {
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 20px;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    opacity: 0.7;
+    margin-bottom: 5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .slider img {
+        width: 150px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+}
+/* MELANJUTKAN TONTON */
+.continue {
+    padding: 30px 40px;
+}
+
+.continue-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.continue-slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+}
+
+.movie-card {
+    min-width: 260px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.movie-card p {
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Progress Bar */
+.progress {
+    height: 5px;
+    background: #333;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #2563eb;
+}
+
+/* CONTAINER */
+.continue-container {
+    position: relative;
+}
+
+/* SLIDER */
+.continue-slider {
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* BUTTON SLIDER */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #fff;
+    font-size: 30px;
+    width: 45px;
+    height: 90px;
+    cursor: pointer;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+/* posisi */
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+/* tampil saat hover */
+.continue-container:hover .slider-btn {
+    opacity: 1;
+}
+
+.slider-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* CARD */
+.movie-card {
+    min-width: 260px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+/* FOOTER */
+.footer {
+    background: #0b0b0b;
+    padding: 30px 40px 50px;
+    color: #fff;
+}
+
+.footer-line {
+    height: 1px;
+    background: #2a2a2a;
+    margin-bottom: 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 250px 1fr 220px;
+    gap: 40px;
+    align-items: start;
+}
+
+/* BRAND */
+.footer-brand h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.footer-brand p {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+/* GENRE */
+.footer-genre h4,
+.footer-help h4 {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 8px 15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.genre-grid span,
+.footer-help span {
+    cursor: pointer;
+}
+
+.genre-grid span:hover,
+.footer-help span:hover {
+    color: #3b82f6;
+}
+
+/* BANTUAN */
+.footer-help {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media(max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

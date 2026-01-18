@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chill | Masuk</title>
+  
+  <!-- CSS -->
+  <style>
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzk4YLvofhGLJ7-TOiXiiqLh9LvDgPNr4zFA&s")
+              center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+/* WRAPPER */
+.auth-wrapper {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* CARD */
+.auth-card {
+  width: 100%;
+  max-width: 360px; /* sesuai figma mobile */
+  background: rgba(28,31,36,0.95);
+  border-radius: 16px;
+  padding: 24px;
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* TITLE */
+h1 {
+  text-align: center;
+  margin: 8px 0 4px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #c1c2c4;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+label {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  background: #121417;
+  border: 1px solid #2f3338;
+  color: white;
+  margin-bottom: 14px;
+}
+
+input::placeholder {
+  color: #8b8b8b;
+}
+
+/* PASSWORD */
+.password-box {
+  position: relative;
+}
+
+.password-box .eye {
+  position: absolute;
+  right: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+/* LINKS */
+.form-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+.form-info a {
+  color: #c1c2c4;
+  text-decoration: none;
+}
+
+/* BUTTON */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #3b3f45;
+  color: white;
+  font-weight: 600;
+}
+
+.divider {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin: 16px 0;
+}
+
+/* GOOGLE */
+.btn-google {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid #2f3338;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-google img {
+  width: 18px;
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 768px) {
+  .auth-card {
+    max-width: 420px;
+    padding: 32px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Wrapper -->
+  <main class="auth-wrapper">
+
+    <!-- Card -->
+    <section class="auth-card">
+
+      <div class="logo">
+        🎬 <span>CHILL</span>
+      </div>
+
+      <h1>Masuk</h1>
+      <p class="subtitle">Selamat datang kembali!</p>
+
+      <form>
+        <label>Username</label>
+        <input type="text" placeholder="Masukkan username" required />
+
+        <label>Kata Sandi</label>
+        <div class="password-box">
+          <input type="password" placeholder="Masukkan kata sandi" required />
+          <span class="eye">👁</span>
+        </div>
+
+        <div class="form-info">
+          <a href="register.html">Belum punya akun? <b>Daftar</b></a>
+          <a href="#">Lupa kata sandi?</a>
+        </div>
+
+        <button class="btn-primary">Masuk</button>
+
+        <div class="divider">atau</div>
+
+        <button class="btn-google">
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" />
+          Masuk dengan Google
+        </button>
+      </form>
+
+    </section>
+  </main>
+
+</body>
+</html>
